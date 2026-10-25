@@ -1,4 +1,4 @@
-# RFY BUSY Bar Display
+# V4 RFY BUSY Bar Display
 
 Show each item from V4's **Discovered RFY** webhook on a [BUSY Bar](https://busy.bar) as it arrives: a 16x16 icon, the item title, and its ETV colour-coded by value.
 
@@ -95,14 +95,6 @@ V4  --signed POST-->  receiver  -->  SQLite queue  -->  display worker  -->  BUS
 - Runs in the foreground; there is no autostart or service wrapper. Start it before using V4.
 - Scroll timing uses an estimated character width (`RFY_CHAR_PX`, default 6) and may need tuning for your fonts.
 - ASCII only: non-ASCII characters in titles are replaced.
-
-## Suggested `.gitignore`
-
-```
-rfy_bar.env
-rfy_bar.db*
-__pycache__/
-```
 
 ## Credits
 
